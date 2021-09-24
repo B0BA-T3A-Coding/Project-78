@@ -1,14 +1,20 @@
-var images = ["https://https://tse2.mm.bing.net/th?id=OIP.ml0Uu4nIp1s81eevnNJ9bwHaHa&pid=Api&P=0&w=300&h=300i.postimg.cc/MGn9GJXw/family.jpg", "https://tse4.mm.bing.net/th?id=OIP._ZnE5M0asQj_2ITthOc54gHaH5&pid=Api&P=0&w=300&h=300" , "https://tse2.mm.bing.net/th?id=OIP.FM-AgOyS2CuvqvGZfl5t1gHaQ3&pid=Api&P=0&w=300&h=300", "https://i.postimg.cc/JnL6wtrd/sisthttp://clipground.com/images/boy-clipart-9.jpger.jpg", "https://cliparting.com/wp-content/uploads/2018/03/cartoon-girl-2018-48.jpg"];
-var names = ["Family Book", "Dad", "Mom", "Sister(Me)", "Brother"];
-var i=0;
-function next(){
-  document.getElementById("FI").src=image[i];
-  document.getElementById("FN").innerHTML=names[i];
-  i++; 
-
-    if (i == 4)
+var images = ["https://i.postimg.cc/MGn9GJXw/family.jpg", "https://i.postimg.cc/wjMnFtMX/father.jpg" , "https://i.postimg.cc/5ymDKL83/bro.jpg", "https://i.postimg.cc/JnL6wtrd/sister.jpg", "https://i.postimg.cc/bw5W5zSK/mother.jpg"];
+var names = ["Family Book","Dad", "Brother", "Tiya(me)", "Mom"];
+var i = 0;
+function update()
+{
+    i++;
+    var numbers_of_family_member_in_array = 4
+    if(i > numbers_of_family_member_in_array)
       {
           i = 0;
       }
     
+    //Debug the code to store list of images in updatedImage. Use images[i]
+    var updatedImage = images[i];
+    //Debug the code to store list of names in updatedName. Use names[i]
+    var updatedName = names[i];
+ 
+    document.getElementById("family_member_image").src = updatedImage;
+    document.getElementById("family_member_name").innerHTML = updatedName;
 }
